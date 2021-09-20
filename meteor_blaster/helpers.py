@@ -103,6 +103,7 @@ def load_game(ship1):
 def refresh_hearts(lives):
     x_pos, y_pos = 560, 10  # coordinates of first heart
     offset = 30  # offset between heart positions
+    s.heart_group.empty()
 
     # creates heart images in corner to show player how many lives they have
     for i in range(lives):
@@ -111,11 +112,6 @@ def refresh_hearts(lives):
         x_pos -= offset
         heart.rect.y = y_pos
         s.heart_group.add(heart)
-
-    # delete any out of bounds heart sprites
-    for sprite in s.heart_group:
-        if sprite.rect.x < ((x_pos + offset) - (lives * offset)):
-            sprite.kill()
 
 
 def enter_name():

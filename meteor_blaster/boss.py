@@ -196,7 +196,7 @@ class laser(pg.sprite.Sprite):
         self.rect.centerx = center_x
 
 
-def boss_fight(ship1, ship2):
+def boss_fight(ship1, ship2, level):
     """contains code for the boss fight at the end of each level"""
 
     clock = pg.time.Clock()
@@ -266,7 +266,7 @@ def boss_fight(ship1, ship2):
         if ship2 != 0:
             screen.blit(ship2.ship, ship2.rect)
         # check for player input (moving, shooting etc...)
-        player.check_events(ship1, ship2, s.bullet_group)
+        player.check_events(ship1, ship2, s.bullet_group, level)
 
         bullet_collision_list = pg.sprite.groupcollide(
             s.bullet_group, boss_group, True, False

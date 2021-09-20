@@ -321,8 +321,7 @@ def game_over(score, ship1, ship2, timer):
     while True:
         for event in pg.event.get():
             if event.type == pg.MOUSEBUTTONDOWN:
-                pg.quit()
-                exit()
+                main()
 
 
 def main():
@@ -402,9 +401,8 @@ def main():
             ship1.money += coin_bonus
 
         # if all meteors are destroyed, initiate the boss fight
-        if len(s.meteor_group) == 0 and timer > 10:
-            boss.boss_fight(ship1, ship2)
-            helpers.refresh_hearts(ship1.lives)
+        if len(s.meteor_group) == 0:
+            boss.boss_fight(ship1, ship2, level)
             # player advances to the next level
             level += 1
             s.num_meteors += 10
@@ -422,15 +420,16 @@ def main():
             # once boss is defeated, enter the shop to buy upgrades
             shop(ship1, ship2)
 
-        # redraw all sprites
+        # draw all sprites
         sprites.add_sprites(s.meteor_group, s.powerup_group)
         s.meteor_group.draw(screen)
         s.bullet_group.draw(screen)
         s.powerup_group.draw(screen)
 
         # makes the screen constantly scroll, giving the illusion of movement
-        y1 += 0.5
-        y2 += 0.5
+        scroll_speed = 0.5 + timer * 0.001
+        y1 += scroll_speed
+        y2 += scroll_speed
         if y1 > s.screen_height:
             y1 = -s.screen_height
         if y2 > s.screen_height:

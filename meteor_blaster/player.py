@@ -25,8 +25,9 @@ def pause_game(ship1, score, level):
     screen.blit(paused, paused_rect)
 
     # display meteors remaining, money and lives left to user
+    # -1 meteor is to make the boss fight start properly
     helpers.display_text(
-        ("Meteors: " + str(len(s.meteor_group))), "left", "top", 20, 20
+        ("Meteors: " + str(len(s.meteor_group) - 1)), "left", "top", 20, 20
     )
     helpers.display_text(("Money: " + str(ship1.money)), "left", "top", 20, 50)
     helpers.display_text(("Lives: " + str(ship1.lives)), "left", "top", 20, 80)
