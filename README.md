@@ -53,9 +53,7 @@ Pause Menu with game info and option to save game, accessed by pressing 'p'.
 
 At the end of each level there is a boss fight where you fight a giant spaceship that has 4 different attack methods that effect different areas of the screen, the boss constantly attacks, picking the attack method based on player position. The bosses health is indicated by a health bar on the side of the screen, when this reaches 0 the boss fight ends and a death animation is triggered.
 
-![Meteor Blaster: Boss Fight](https://github.com/NoahHA/meteor-blaster/blob/main/meteor_blaster/images/demonstration%20images/boss%20fight%202.png?raw=true)
-
-Insert GIF of killing the boss
+![meteor_blaster_boss](https://user-images.githubusercontent.com/16436026/136597876-62da331d-e0f5-4daf-bc74-92d39bde9063.gif)
 
 Once the boss is defeated, the player enters a shop menu where they can purchase a variety of power ups based on how many gems they have collected over the course of the game. Once they exit the shop they enter the next level and have to go through everything again but with increased difficulty, this continues until they die.
 
