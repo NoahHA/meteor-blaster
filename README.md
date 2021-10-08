@@ -45,7 +45,7 @@ Start menu with options for one player or two player mode. It also gives players
 
 Bulk of the game is meteors/gems falling from the sky which the player has to shoot/collect:
 
-Insert GIF of gameplay
+![meteor_blaster_gameplay](https://user-images.githubusercontent.com/16436026/136595782-1a167fa9-509a-4df5-a129-2c4f5b29f3b5.gif)
 
 Pause Menu with game info and option to save game, accessed by pressing 'p'.
 
